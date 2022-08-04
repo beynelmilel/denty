@@ -1,0 +1,20 @@
+{
+    "denty": "denty",
+    "signIn": "Sign In",
+    "signUp":"Sign Up",
+    "dontAccount": "Don't have an account?",
+    "clinicName": "Clinic Name",
+    "alreadyAccount": "Already have an account?",
+    "createAccount": "Create Account",
+    "email": "Email",
+    "password": "Password",
+    "nameSurname": "Name Surname",
+    "age": "Age",
+    "phoneNumber": "Phone Number",
+    "clinicAddress": "Clinic Address",
+    "province": "Province",
+    "district": "District",
+    "field": "Fields",
+    "egField": "e.g: orthodontics"
+    
+}

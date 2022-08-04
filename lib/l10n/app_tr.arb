@@ -1,0 +1,20 @@
+{
+    "denty": "denty",
+    "signIn": "Giriş Yap",
+    "signUp": "Kayıt Ol",
+    "clinicName": "Klinik Adı",
+    "dontAccount": "Hesabınız yok mu?",
+    "alreadyAccount": "Zaten hesabınız var mı?",
+    "createAccount": "Hesap Oluştur",
+    "email": "Email",
+    "password": "Şifre",
+    "nameSurname": "İsim Soyisim",
+    "age": "Yaş",
+    "phoneNumber": "Telefon Numarası",
+    "clinicAddress": "Klinik Adresi",
+    "province": "İl",
+    "district": "İlçe",
+    "field": "Alan",
+    "egField": "örn: ortodonti"
+
+}

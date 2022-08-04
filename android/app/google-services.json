@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "830757013021",
+    "project_id": "denty-8cfca",
+    "storage_bucket": "denty-8cfca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:830757013021:android:4a40a0c98628d4e3eae8f4",
+        "android_client_info": {
+          "package_name": "com.example.denty"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "830757013021-05k296btqqde00ijbuqg5kuhb665fg5p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB7V7QM93l3VEscJOvEJUJ5FQctLXTNpmw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "830757013021-05k296btqqde00ijbuqg5kuhb665fg5p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
