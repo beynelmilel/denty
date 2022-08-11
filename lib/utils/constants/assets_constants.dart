@@ -1,6 +1,8 @@
 class LottieConstants {
   static const String tooth = 'assets/lottie/lottie_tooth.json';
   static const String searchDoctors = 'assets/lottie/lottie_search_doctor.json';
+  static const String category = 'assets/lottie/lottie_category.json';
+  static const String login = 'assets/lottie/lottie_login.json';
 }
 
 class BackgroundConstants {

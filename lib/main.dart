@@ -1,5 +1,5 @@
-import 'package:denty/view/admin/my_doctors_appointment_view.dart';
-import 'package:denty/view/admin/my_doctors_detail_view.dart';
+import 'package:denty/view/onboard/view/first_onboard_view.dart';
+import 'package:denty/view/onboard/view/third_onboard_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -10,6 +10,7 @@ import 'core/provider/user_provider.dart';
 import 'core/routes/route.dart';
 import 'core/theme/theme.dart';
 import 'firebase_options.dart';
+import 'view/onboard/view/second_onboard_view.dart';
 
 Future<void> main() async {
   SystemChrome.setSystemUIOverlayStyle(
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
         onGenerateRoute: Routes.generateRoute,
         //initialRoute: homeViewRoute,
         // title: 'Denty',
-        home: MyDoctorsDetailView(),
+        home: ThirdOnBoardView(),
       ),
     );
   }

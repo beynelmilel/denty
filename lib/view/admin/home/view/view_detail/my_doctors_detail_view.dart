@@ -1,11 +1,11 @@
 import 'package:denty/utils/widgets/custom_button_widget.dart';
 import 'package:flutter/material.dart';
 
-import '../../core/theme/theme.dart';
-import '../../utils/constants/assets_constants.dart';
-import '../../utils/constants/colors_constants.dart';
-import '../doctors/detail/view/doctors_detail_view.dart';
-import '../doctors/widget/appointment_app_bar.dart';
+import '../../../../../core/theme/theme.dart';
+import '../../../../../utils/constants/assets_constants.dart';
+import '../../../../../utils/constants/colors_constants.dart';
+import '../../../../doctors/detail/view/doctors_detail_view.dart';
+import '../../../../doctors/widget/appointment_app_bar.dart';
 
 class MyDoctorsDetailView extends StatelessWidget {
   const MyDoctorsDetailView({Key? key}) : super(key: key);

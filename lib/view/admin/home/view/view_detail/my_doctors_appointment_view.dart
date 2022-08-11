@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../core/theme/theme.dart';
-import '../../utils/constants/colors_constants.dart';
+import '../../../../../core/theme/theme.dart';
+import '../../../../../utils/constants/colors_constants.dart';
 
 class MyDoctorAppointmentView extends StatelessWidget {
   const MyDoctorAppointmentView({Key? key}) : super(key: key);

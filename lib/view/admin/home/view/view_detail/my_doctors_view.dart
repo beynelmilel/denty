@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../../core/theme/theme.dart';
-import '../../utils/constants/assets_constants.dart';
-import '../../utils/constants/colors_constants.dart';
+import '../../../../../core/theme/theme.dart';
+import '../../../../../utils/constants/assets_constants.dart';
+import '../../../../../utils/constants/colors_constants.dart';
 
 class MyDoctorsView extends StatelessWidget {
   const MyDoctorsView({Key? key}) : super(key: key);
