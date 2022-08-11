@@ -1,13 +1,14 @@
-import 'package:denty/core/product/auth_service.dart';
-import 'package:denty/utils/constants/router_constants.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:denty/view/admin/my_doctors_appointment_view.dart';
+import 'package:denty/view/admin/my_doctors_detail_view.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:provider/provider.dart';
+
+import 'core/provider/user_provider.dart';
 import 'core/routes/route.dart';
 import 'core/theme/theme.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 
 Future<void> main() async {
@@ -29,8 +30,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
-        Provider<AuthService>(create: (_) => AuthService(FirebaseAuth.instance)),
-        StreamProvider(create: (context) => context.read<AuthService>().authStateChanges, initialData: null,)
+        ChangeNotifierProvider(create: (_) => UserProvider()),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -38,9 +38,9 @@ class MyApp extends StatelessWidget {
         supportedLocales: AppLocalizations.supportedLocales,
         theme: themeData,
         onGenerateRoute: Routes.generateRoute,
-        initialRoute: signInViewRoute,
+        //initialRoute: homeViewRoute,
         // title: 'Denty',
-        // home: SplashView(),
+        home: MyDoctorsDetailView(),
       ),
     );
   }
