@@ -17,37 +17,37 @@ class SplashView extends StatefulWidget {
 }
 
 class _SplashViewState extends State<SplashView> {
-  String role = 'Hasta';
-  @override
-  void initState() {
-    super.initState();
-    _checkRole();
-  }
+  // String role = 'Hasta';
+  // @override
+  // void initState() {
+  //   super.initState();
+  //   _checkRole();
+  // }
 
-  void _checkRole() async {
-    User? user = FirebaseAuth.instance.currentUser;
-    final DocumentSnapshot snap = await FirebaseFirestore.instance
-        .collection('users')
-        .doc(user?.uid)
-        .get();
+  // void _checkRole() async {
+  //   User? user = FirebaseAuth.instance.currentUser;
+  //   final DocumentSnapshot snap = await FirebaseFirestore.instance
+  //       .collection('users')
+  //       .doc(user?.uid)
+  //       .get();
 
-    setState(() {
-      role = snap['role'];
-    });
+  //   setState(() {
+  //     role = snap['role'];
+  //   });
 
-    if (role == 'Hasta') {
-      Navigator.pushNamedAndRemoveUntil(
-          context, homeViewRoute, (route) => false);
-    } else if (role == 'Doktor') {
-      Navigator.pushNamedAndRemoveUntil(
-          context, adminViewRoute, (route) => false);
-    }
-  }
+  //   if (role == 'Hasta') {
+  //     Navigator.pushNamedAndRemoveUntil(
+  //         context, homeViewRoute, (route) => false);
+  //   } else if (role == 'Doktor') {
+  //     Navigator.pushNamedAndRemoveUntil(
+  //         context, adminViewRoute, (route) => false);
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(seconds: 5), () {
-      Navigator.pushNamed(context, onboardViewRoute);
+      Navigator.pushNamed(context, firstOnboardViewRoute);
     });
     final size = MediaQuery.of(context).size;
     return Scaffold(

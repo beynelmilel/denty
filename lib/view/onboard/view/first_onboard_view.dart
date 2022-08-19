@@ -1,3 +1,4 @@
+import 'package:denty/utils/constants/router_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -13,7 +14,9 @@ class FirstOnBoardView extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, secondOnboardViewRoute);
+        },
         elevation: 0,
         backgroundColor: ColorsConstans.accentGreen,
         label: const Text('Sonraki'),

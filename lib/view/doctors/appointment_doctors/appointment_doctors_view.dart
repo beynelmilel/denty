@@ -1,9 +1,9 @@
 import 'package:denty/utils/constants/colors_constants.dart';
-import 'package:denty/view/doctors/view/doctors_view.dart';
+import 'package:denty/view/doctors/view/category_doctors_view.dart';
 import 'package:flutter/material.dart';
 
 import '../../../core/theme/theme.dart';
-import '../../user/home/view/home_view.dart';
+import '../../../utils/widgets/custom_bottom_nav_bar.dart';
 
 class DoctorsByAppointment extends StatelessWidget {
   const DoctorsByAppointment({Key? key}) : super(key: key);

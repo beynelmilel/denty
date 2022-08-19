@@ -19,7 +19,7 @@ class SignUpView extends StatefulWidget {
   State<SignUpView> createState() => _SignUpViewState();
 }
 
-String dropdownvalue = 'Hasta';
+String dropdownvalue = 'Kullanıcı';
 
 class _SignUpViewState extends State<SignUpView> {
   final TextEditingController _nameSurnameController = TextEditingController();
@@ -52,12 +52,12 @@ class _SignUpViewState extends State<SignUpView> {
         phoneNumber: _phoneController.text,
         role: dropdownvalue);
 
-    if (response == "success" && dropdownvalue == 'Hasta') {
+    if (response == "success" && dropdownvalue == 'Kullanıcı') {
       setState(() {
         _isLoading = false;
       });
       Navigator.pushReplacementNamed(context, homeViewRoute);
-    } else if (response == "success" && dropdownvalue == 'Doktor') {
+    } else if (response == "success" && dropdownvalue == 'Admin') {
       setState(() {
         _isLoading = false;
       });
@@ -109,7 +109,7 @@ class _SignUpViewState extends State<SignUpView> {
                           icon: const Icon(Icons.keyboard_arrow_down),
 
                           // Array list of items
-                          items: ['Doktor', 'Hasta'].map((String items) {
+                          items: ['Admin', 'Kullanıcı'].map((String items) {
                             return DropdownMenuItem(
                               value: items,
                               child: Text(items),

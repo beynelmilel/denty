@@ -24,7 +24,7 @@ class _SignInViewState extends State<SignInView> {
   final TextEditingController _passwordController = TextEditingController();
   bool _isLoading = false;
 
-  String dropdownvalue = 'Hasta';
+  String dropdownvalue = 'Kullanıcı';
 
   @override
   void dispose() {
@@ -39,12 +39,13 @@ class _SignInViewState extends State<SignInView> {
     });
     String response = await AuthService().loginUser(
         email: _emailController.text, password: _passwordController.text);
-    if (response == "success" && dropdownvalue == 'Hasta') {
+    if (response == "success" && dropdownvalue == 'Kullanıcı') {
       setState(() {
         _isLoading = false;
       });
       Navigator.pushNamed(context, homeViewRoute);
-    } if (response == "success" && dropdownvalue == 'Doktor') {
+    }
+    if (response == "success" && dropdownvalue == 'Admin') {
       setState(() {
         _isLoading = false;
       });
@@ -72,6 +73,7 @@ class _SignInViewState extends State<SignInView> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     RegisterTitle(
                       title: AppLocalizations.of(context).signIn,
@@ -93,7 +95,7 @@ class _SignInViewState extends State<SignInView> {
                           icon: const Icon(Icons.keyboard_arrow_down),
 
                           // Array list of items
-                          items: ['Doktor', 'Hasta'].map((String items) {
+                          items: ['Admin', 'Kullanıcı'].map((String items) {
                             return DropdownMenuItem(
                               value: items,
                               child: Text(items),
