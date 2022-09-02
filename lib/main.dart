@@ -1,4 +1,3 @@
-import 'package:denty/view/user/home/view/home_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -9,7 +8,7 @@ import 'core/provider/user_provider.dart';
 import 'core/routes/route.dart';
 import 'core/theme/theme.dart';
 import 'firebase_options.dart';
-import 'view/appointment/view/my_appointment_view.dart';
+import 'utils/constants/router_constants.dart';
 import 'view/doctors/add_doctor/add_doctors_view.dart';
 
 Future<void> main() async {

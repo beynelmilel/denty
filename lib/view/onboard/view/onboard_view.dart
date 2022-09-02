@@ -35,7 +35,7 @@ class OnBoardView extends StatelessWidget {
                       color: ColorsConstans.accentGreen,
                       text: AppLocalizations.of(context).signIn,
                       onPress: () {
-                        Navigator.pushNamed(context, signInViewRoute);
+                        Navigator.pushNamedAndRemoveUntil(context, signInViewRoute, (route) => false);
                       },
                     ),
                     SizedBox(
@@ -47,7 +47,7 @@ class OnBoardView extends StatelessWidget {
                       color: ColorsConstans.transparent,
                       borderColor: Colors.white,
                       onPress: () {
-                        Navigator.pushNamed(context, signUpViewRoute);
+                        Navigator.pushNamedAndRemoveUntil(context, signUpViewRoute, (route) => false);
                       },
                     )
                   ],

@@ -35,7 +35,7 @@ class ThirdOnBoardView extends StatelessWidget {
               size: size,
               text: 'Hadi Başlayalım',
               onPress: () {
-                Navigator.pushNamed(context, onboardViewRoute);
+                Navigator.pushNamedAndRemoveUntil(context, onboardViewRoute, (route) => false);
               },
               color: ColorsConstans.accentGreen,
             )
