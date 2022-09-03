@@ -25,7 +25,7 @@ class Routes {
       case signInViewRoute:
         return MaterialPageRoute(builder: (_) => const SignInView());
       case homeViewRoute:
-        return MaterialPageRoute(builder: (_) => const HomeView());
+        return MaterialPageRoute(builder: (_) => HomeView());
       case adminViewRoute:
         return MaterialPageRoute(builder: (_) => const AdminView());
       case firstOnboardViewRoute:

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
+import '../../core/product/service/auth_service.dart';
 import '../../core/theme/theme.dart';
 import '../constants/router_constants.dart';
 
 class CustomBottomNavigationBar extends StatelessWidget {
-  const CustomBottomNavigationBar({
+  CustomBottomNavigationBar({
     Key? key,
     required this.size,
     this.index = 0,
@@ -13,6 +14,8 @@ class CustomBottomNavigationBar extends StatelessWidget {
 
   final Size size;
   final int index;
+
+  AuthService auth = AuthService();
 
   @override
   Widget build(BuildContext context) {
@@ -110,7 +113,10 @@ class CustomBottomNavigationBar extends StatelessWidget {
                               size: size,
                               text: 'Çıkış Yap',
                               icon: Icons.logout_outlined,
-                              onPressed: () {},
+                              onPressed: (){
+                                auth.signOut();
+                                Navigator.pushNamed(context, onboardViewRoute);
+                              },
                             )
                           ],
                         ),

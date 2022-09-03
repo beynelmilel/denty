@@ -4,7 +4,6 @@ import 'package:denty/utils/widgets/background_container_widget.dart';
 import 'package:denty/utils/widgets/custom_button_widget.dart';
 import 'package:denty/utils/widgets/custom_text_form_field.dart';
 import 'package:denty/view/doctors/widget/appointment_app_bar.dart';
-import 'package:denty/view/search/view/search_view.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 

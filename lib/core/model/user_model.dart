@@ -23,7 +23,7 @@ class UserModel {
     return UserModel(
       role: snapshot["role"],
       nameSurname: snapshot["nameSurname"],
-      uid: snapshot["uid"],
+      uid: snap.id,
       email: snapshot["email"],
       age: snapshot["age"],
       password: snapshot["password"],
@@ -40,4 +40,13 @@ class UserModel {
         "password": password,
         "phoneNumber": phoneNumber
       };
+
+  static UserModel fromJson(Map<String, dynamic> json) => UserModel(
+      role: json['role'],
+      email: json['email'],
+      uid: json['uid'],
+      nameSurname: json['nameSurname'],
+      age: json['age'],
+      phoneNumber: json['phoneNumber'],
+      password: json['password']);
 }

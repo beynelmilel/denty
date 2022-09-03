@@ -4,17 +4,16 @@ import 'package:denty/core/model/user_model.dart';
 
 class AuthService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
-  final FirebaseAuth _auth = FirebaseAuth.instance;
+  final FirebaseAuth auth = FirebaseAuth.instance;
 
   Future<UserModel> getUserDetails() async {
-    User currentUser = _auth.currentUser!;
+    final User? user = auth.currentUser;
 
     DocumentSnapshot documentSnapshot =
-        await _firestore.collection('users').doc(currentUser.uid).get();
+        await _firestore.collection('users').doc(user?.uid).get();
 
     return UserModel.fromSnap(documentSnapshot);
   }
-
 
 
   Future<String> signUpUser({
@@ -34,7 +33,7 @@ class AuthService {
           phoneNumber.isNotEmpty ||
           role.isNotEmpty) {
 
-        UserCredential cred = await _auth.createUserWithEmailAndPassword(
+        UserCredential cred = await auth.createUserWithEmailAndPassword(
           email: email,
           password: password,
         );
@@ -73,7 +72,7 @@ class AuthService {
     String res = "Some error Occurred";
     try {
       if (email.isNotEmpty || password.isNotEmpty) {
-        await _auth.signInWithEmailAndPassword(
+        await auth.signInWithEmailAndPassword(
           email: email,
           password: password,
         );
@@ -88,6 +87,6 @@ class AuthService {
   }
 
   Future<void> signOut() async {
-    await _auth.signOut();
+    await auth.signOut();
   }
 }

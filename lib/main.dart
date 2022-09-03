@@ -1,5 +1,3 @@
-
-
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -10,7 +8,7 @@ import 'core/provider/user_provider.dart';
 import 'core/routes/route.dart';
 import 'core/theme/theme.dart';
 import 'firebase_options.dart';
-import 'view/doctors/detail/appointment/appointment_view.dart';
+import 'view/auth/sign_in/view/sign_in_view.dart';
 
 Future<void> main() async {
   SystemChrome.setSystemUIOverlayStyle(
@@ -41,7 +39,7 @@ class MyApp extends StatelessWidget {
         onGenerateRoute: Routes.generateRoute,
         // initialRoute: splashViewRoute,
         // title: 'Denty',
-        home: AppointmentView(),
+        home: SignInView(),
       ),
     );
   }
