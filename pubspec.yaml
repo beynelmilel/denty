@@ -9,6 +9,7 @@ environment:
   sdk: ">=2.17.0 <3.0.0"
 
 dependencies:
+  bloc: ^8.1.0
   cloud_firestore: ^3.4.3
   cupertino_icons: ^1.0.2
   date_time_picker: ^2.1.0
@@ -16,12 +17,16 @@ dependencies:
   firebase_core: ^1.20.0
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.1
   flutter_localizations:
     sdk: flutter
+  get_it: ^7.2.0
   google_nav_bar: ^5.0.6
+  image_picker: ^0.8.5+3
   intl: ^0.17.0
   lottie: ^1.4.0
   provider: ^6.0.3
+  shared_preferences: ^2.0.15
   syncfusion_flutter_datepicker: ^20.2.43
 
 dev_dependencies:

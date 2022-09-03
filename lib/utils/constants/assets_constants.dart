@@ -3,6 +3,8 @@ class LottieConstants {
   static const String searchDoctors = 'assets/lottie/lottie_search_doctor.json';
   static const String category = 'assets/lottie/lottie_category.json';
   static const String login = 'assets/lottie/lottie_login.json';
+  static const String doctorPhoto = 'assets/lottie/lottie_doctor_photo.json';
+  static const String appointment = 'assets/lottie/lottie_appointment.json';
 }
 
 class BackgroundConstants {

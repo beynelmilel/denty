@@ -1,3 +1,5 @@
+import 'package:denty/view/auth/sign_in/view/sign_in_view.dart';
+import 'package:denty/view/doctors/detail/appointment/appointment_view.dart';
 import 'package:denty/view/user/home/view/home_view.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -41,7 +43,7 @@ class MyApp extends StatelessWidget {
         onGenerateRoute: Routes.generateRoute,
         // initialRoute: splashViewRoute,
         // title: 'Denty',
-        home: AddDoctorsView(),
+        home: AppointmentView(),
       ),
     );
   }
