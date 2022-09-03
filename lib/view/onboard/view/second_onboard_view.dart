@@ -14,7 +14,7 @@ class SecondOnBoardView extends StatelessWidget {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(
         onPressed: () {
-          Navigator.pushNamed(context, thirdOnboardViewRoute);
+          Navigator.pushNamedAndRemoveUntil(context, thirdOnboardViewRoute, (route) => false);
         },
         elevation: 0,
         backgroundColor: ColorsConstans.accentGreen,
