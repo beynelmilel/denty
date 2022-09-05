@@ -6,26 +6,10 @@ import 'package:flutter/material.dart';
 import '../../../../core/model/user_model.dart';
 import '../../../../core/theme/theme.dart';
 
-class HomeCubit extends Cubit<HomeState> {
-  HomeCubit() : super(HomeInitial());
+class AdminCubit extends Cubit<AdminState> {
+  AdminCubit() : super(AdminInitial());
 
   FirebaseAuth auth = FirebaseAuth.instance;
-
-  Stream<List<UserModel>> getUsers() => FirebaseFirestore.instance
-      .collection('users')
-      .snapshots()
-      .map((snapshot) =>
-          snapshot.docs.map((doc) => UserModel.fromJson(doc.data())).toList());
-
-  Widget buildCard() => Container(
-        color: Colors.red,
-        width: 200,
-        height: 200,
-      );
-
-  Widget buildSpace() => const SizedBox(
-        width: 12,
-      );
 
   Widget buildUser(UserModel user) {
     return Text('${user.nameSurname}',
@@ -46,6 +30,6 @@ class HomeCubit extends Cubit<HomeState> {
   }
 }
 
-abstract class HomeState {}
+abstract class AdminState {}
 
-class HomeInitial extends HomeState {}
+class AdminInitial extends AdminState {}

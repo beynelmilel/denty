@@ -24,13 +24,13 @@ class _HomeViewState extends State<HomeView> {
       child: BlocConsumer<HomeCubit, HomeState>(
         listener: (context, state) {},
         builder: (context, state) {
-          return _buildScaffold(size);
+          return _buildScaffold(size, context);
         },
       ),
     );
   }
 
-  Scaffold _buildScaffold(Size size) {
+  Scaffold _buildScaffold(Size size, BuildContext context) {
     return Scaffold(
       backgroundColor: ColorsConstans.customGrey,
       appBar: AppBar(

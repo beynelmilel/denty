@@ -15,7 +15,7 @@ class SignInCubit extends Cubit<SignInState> {
   bool _isLoading = false;
   BuildContext context;
 
-  String dropdownvalue = 'Kullanıcı';
+  String dropdownvalue = 'Admin';
 
   Future<void> loginUser() async {
     _isLoading = true;

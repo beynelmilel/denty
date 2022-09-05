@@ -8,3 +8,6 @@ const String firstOnboardViewRoute = 'firstOnboardViewRoute';
 const String secondOnboardViewRoute = 'secondOnboardViewRoute';
 const String thirdOnboardViewRoute = 'thirdOnboardViewRoute';
 const String doctorViewRoute = 'doctorViewRoute';
+const String userProfileViewRoute = 'userProfileViewRoute';
+const String adminProfileViewRoute = 'adminProfileViewRoute';
+const String addDoctorViewRoute = 'addDoctorViewRoute';

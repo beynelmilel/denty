@@ -39,72 +39,76 @@ class SignInView extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.only(
               left: size.width * 0.05, top: size.height * 0.08),
-          child: Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          child: Column(
+            children: [
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    RegisterTitle(
-                      title: AppLocalizations.of(context).signIn,
-                      onPressed: () {
-                        Navigator.pushNamed(context, signUpViewRoute);
-                      },
-                      textButtonText: '${AppLocalizations.of(context).signUp}!',
-                      questionText: AppLocalizations.of(context).dontAccount,
-                    ),
-                    Padding(
-                      padding: EdgeInsets.only(right: size.width * 0.09),
-                      child: DropdownButton(
-                          style: TextStyle(color: themeData.primaryColor),
-                          // Initial Value
-                          value: context.read<SignInCubit>().dropdownvalue,
-                          // Down Arrow Icon
-                          icon: const Icon(Icons.keyboard_arrow_down),
-                          // Array list of items
-                          items: ['Admin', 'Kullanıcı'].map((String items) {
-                            return DropdownMenuItem(
-                              value: items,
-                              child: Text(items),
-                            );
-                          }).toList(),
-                          onChanged: (String? newValue) {
-                              context.read<SignInCubit>().dropdownvalue = newValue!;
-                          }),
-                    )
-                  ],
-                ),
-                Form(
-                  child: Padding(
-                    padding: EdgeInsets.only(
-                        right: size.width * 0.05, top: size.height * 0.05),
-                    child: Column(
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        CustomTextFormField(
-                          controller: context.read<SignInCubit>().emailController,
-                          label: AppLocalizations.of(context).email,
-                          keyboardType: TextInputType.emailAddress,
+                        RegisterTitle(
+                          title: AppLocalizations.of(context).signIn,
+                          onPressed: () {
+                            Navigator.pushNamed(context, signUpViewRoute);
+                          },
+                          textButtonText: '${AppLocalizations.of(context).signUp}!',
+                          questionText: AppLocalizations.of(context).dontAccount,
                         ),
-                        SizedBox(height: size.height * 0.035),
-                        CustomPasswordTextField(
-                          controller: context.read<SignInCubit>().passwordController,
+                        Padding(
+                          padding: EdgeInsets.only(right: size.width * 0.09),
+                          child: DropdownButton(
+                              style: TextStyle(color: themeData.primaryColor),
+                              // Initial Value
+                              value: context.read<SignInCubit>().dropdownvalue,
+                              // Down Arrow Icon
+                              icon: const Icon(Icons.keyboard_arrow_down),
+                              // Array list of items
+                              items: ['Admin', 'Kullanıcı'].map((String items) {
+                                return DropdownMenuItem(
+                                  value: items,
+                                  child: Text(items),
+                                );
+                              }).toList(),
+                              onChanged: (String? newValue) {
+                                  context.read<SignInCubit>().dropdownvalue = newValue!;
+                              }),
                         )
                       ],
                     ),
-                  ),
+                    Form(
+                      child: Padding(
+                        padding: EdgeInsets.only(
+                            right: size.width * 0.05, top: size.height * 0.05),
+                        child: Column(
+                          children: [
+                            CustomTextFormField(
+                              controller: context.read<SignInCubit>().emailController,
+                              label: AppLocalizations.of(context).email,
+                              keyboardType: TextInputType.emailAddress,
+                            ),
+                            SizedBox(height: size.height * 0.035),
+                            CustomPasswordTextField(
+                              controller: context.read<SignInCubit>().passwordController,
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    SizedBox(height: size.height * 0.04),
+                    CustomButton(
+                      size: size,
+                      text: AppLocalizations.of(context).signIn,
+                      onPress: () {
+                        context.read<SignInCubit>().loginUser();
+                      },
+                      color: themeData.secondaryHeaderColor,
+                    )
+                  ],
                 ),
-                SizedBox(height: size.height * 0.04),
-                CustomButton(
-                  size: size,
-                  text: AppLocalizations.of(context).signIn,
-                  onPress: () {
-                    context.read<SignInCubit>().loginUser();
-                  },
-                  color: themeData.secondaryHeaderColor,
-                )
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ),

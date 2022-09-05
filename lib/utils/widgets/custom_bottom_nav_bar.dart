@@ -115,7 +115,7 @@ class CustomBottomNavigationBar extends StatelessWidget {
                               icon: Icons.logout_outlined,
                               onPressed: (){
                                 auth.signOut();
-                                Navigator.pushNamed(context, onboardViewRoute);
+                                Navigator.pushNamed(context, signInViewRoute);
                               },
                             )
                           ],

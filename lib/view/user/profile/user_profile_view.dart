@@ -1,10 +1,9 @@
 import 'package:denty/core/theme/theme.dart';
 import 'package:denty/utils/constants/colors_constants.dart';
-import 'package:denty/utils/widgets/custom_button_widget.dart';
 import 'package:flutter/material.dart';
 
-class AdminProfileView extends StatelessWidget {
-  const AdminProfileView({Key? key}) : super(key: key);
+class UserProfileView extends StatelessWidget {
+  const UserProfileView({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
